@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Loan Application Approval Predictor </title>
+        <link rel="shortcut icon" href="{% static '/images/bank-favicon-icon.ico' %}">
+       
+        <!-- Font Family -->
+          <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+          <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+          <link rel="stylesheet" type="text/css" href="{% static '/css/loan_approval_predictor_styles.css' %}">
+    </head>
+
+    <body>
+      <!-- header -->
+          <header>
+                 <nav>
+                      <div class="logo"> 
+                      <h1 class=" "> Loan Application Approval Prediction </h1>
+                      </div>
+                </nav>
+         </header>
+
+    <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>Loan Application Approval Prediction for </span><span class="heading_second"> Bank Customer's </span></h2>
+            <div class='description'>
+    		  <p>  </p>
+    	    </div>
+    	</div>
+
+        <!-- Result -->
+		<div class="results">
+			 {% if prediction == 1 %}
+				<h1><span class='approve'> Congrats..! Your Loan Application Is Successfully Approved. </span></h1>
+                                <img class="gif" src="{% static '/images/approved.gif' %}" alt="Approved Image">
+			 {% elif prediction == 0 %}
+				<h1><span class='denied'> Sorry..! Your Loan Application Is Denied. </span></h1>
+                                <img class="gif1" src="{% static '/images/denied.gif' %}" alt="Denied Image">
+		         {% endif %}
+		</div>
+
+
+ <!-- FOOTER -->
+      <div class="footer">
+         <div class="contact"> 
+               <a target="_blank" href="https://www.linkedin.com/in/gokul-patil-0a6a96189"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://github.com/gokul-patil0509/Loan-Application-Approval-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+         </div>
+         <div class='description'>
+    		  <p>A Machine Learning Web App, Built with Django, Deployed using Heroku.</p>
+    	 </div>
+           <p class='footer-description'>Made with ❤️ by Gokul Patil </p>
+      </div>
+
+    </body>
+</html>
