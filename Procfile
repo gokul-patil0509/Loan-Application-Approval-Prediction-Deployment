@@ -1,0 +1,1 @@
+web: gunicorn Loan_Approval_Prediction.wsgi --log-file -
